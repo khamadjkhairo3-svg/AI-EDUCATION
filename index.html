@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة ذكية مدعومة بالذكاء الاصطناعي لتحسين أداء الطالب الجامعي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================
+   Global styles
+   ========================================== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; scroll-behavior: smooth;}
+body { color:#fff; line-height:1.6; position:relative; overflow-x:hidden; }
+
+body::before {
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(135deg, #0a0f1f, #1a2a47);
+  z-index:-2;
+}
+
+/* ==========================================
+   Particles background
+   ========================================== */
+.particles {
+  position:fixed;
+  top:0; left:0; width:100%; height:100%;
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ==========================================
+   Text and links
+   ========================================== */
+a { text-decoration:none; color:inherit; }
+section { padding:80px 20px; position:relative; }
+h1,h2,h3 { margin-bottom:20px; color:#fff; }
+header { text-align:center; padding:120px 20px; position:relative; }
+header h1 { font-size:2.8em; margin-bottom:20px; }
+header p { font-size:1.2em; margin-bottom:40px; max-width:900px; margin-left:auto; margin-right:auto; }
+.btn { background:#007bff; color:#fff; padding:15px 30px; border-radius:50px; font-weight:bold; cursor:pointer; transition:0.3s; display:inline-block; margin-top:20px; }
+.btn:hover { background:#0056b3; transform:scale(1.05); }
+
+/* ==========================================
+   Cards and team
+   ========================================== */
+.section-title { text-align:center; margin-bottom:50px; }
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+.card { background:rgba(17,17,17,0.85); padding:30px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.5); transition:0.3s; }
+.card:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 10px 20px rgba(0,0,0,0.7); }
+.hidden-feature { display:none; }
+.team { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:30px; text-align:center; }
+.member { background:rgba(17,17,17,0.85); padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.5); }
+.member h3 { margin-bottom:10px; color:#007bff; }
+.university { position:absolute; top:20px; right:20px; color:#007bff; font-weight:bold; font-size:1em; }
+@media(max-width:768px){ header h1 { font-size:2em; } .university { font-size:0.9em; } }
+.fade-in { opacity:0; transform:translateY(30px); transition: all 0.8s ease-out; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* ==========================================
+   Particle animation
+   ========================================== */
+.particle { 
+  position:absolute; 
+  background: rgba(255,255,255,0.2); 
+  border-radius:50%; 
+  pointer-events:none; 
+  animation: float 15s linear infinite; 
+}
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-100px) translateX(50px); }
+  100% { transform: translateY(-200px) translateX(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- =========================
+     Particles background
+     ========================= -->
+<div class="particles" id="particles"></div>
+
+<!-- =========================
+     University label
+     ========================= -->
+<div class="university">Ferhat Abbas University</div>
+
+<!-- =========================
+     Header / Frontend
+     ========================= -->
+<header>
+<h1>منصة ذكية مدعومة بالذكاء الاصطناعي لتحسين أداء الطالب الجامعي</h1>
+<p>
+منصتنا هي نظام ذكي متكامل يهدف إلى تحسين تجربة الطالب الجامعي من خلال استخدام الذكاء الاصطناعي لتنظيم الدراسة، تسهيل الوصول إلى الموارد، وتقديم دعم فوري لفهم الدروس. نوفر بيئة رقمية موحدة تجمع بين التعلم، التخطيط، والتفاعل داخل الجامعة.
+</p>
+<a href="#problems" class="btn">اكتشف المشروع</a>
+</header>
+
+<!-- =========================
+     Sections - Frontend
+     ========================= -->
+<section id="problems">
+<div class="section-title">
+<h2>المشاكل التي يواجهها الطلاب</h2>
+</div>
+<div class="cards fade-in">
+<div class="card">
+<h3>تشتت المعلومات</h3>
+<p>الطلاب يجدون صعوبة في جمع الموارد الأكاديمية من مصادر متعددة مما يؤدي إلى ضياع الوقت.</p>
+</div>
+<div class="card">
+<h3>تنظيم الوقت</h3>
+<p>غياب تخطيط فعال مبني على الأولويات يؤثر على الإنتاجية والتحصيل.</p>
+</div>
+<div class="card">
+<h3>صعوبة فهم الدروس</h3>
+<p>غياب دعم فوري لفهم الدروس المعقدة مما يؤثر سلبا على التحصيل الدراسي.</p>
+</div>
+<div class="card">
+<h3>الطلاب الجدد وتحديد المواقع</h3>
+<p>صعوبة معرفة الأقسام والقاعات داخل الحرم الجامعي.</p>
+</div>
+<div class="card">
+<h3>غياب تجربة رقمية متكاملة</h3>
+<p>عدم توفر نظام موحد يجمع مختلف الخدمات الجامعية.</p>
+</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a href="#solutions" class="btn">الحلول</a>
+</div>
+</section>
+
+<section id="solutions">
+<div class="section-title">
+<h2>حلولنا العامة</h2>
+</div>
+<div class="cards fade-in">
+<div class="card">
+<h3>منصة موحدة</h3>
+<p>تجميع كل الموارد والخدمات داخل نظام رقمي مركزي.</p>
+</div>
+<div class="card">
+<h3>تخطيط ذكي</h3>
+<p>استخدام خوارزميات ذكية لتحليل وقت الطالب واقتراح خطة مراجعة مخصصة حسب المواد والأولويات.</p>
+</div>
+<div class="card">
+<h3>دعم تفاعلي</h3>
+<p>توفير نظام يعتمد على التحليل الذكي لتقديم المساعدة الفورية.</p>
+</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a href="#features" class="btn">الميزات التفصيلية</a>
+</div>
+</section>
+
+<section id="features">
+<div class="section-title">
+<h2>ميزات التطبيق</h2>
+</div>
+<div class="cards fade-in">
+<div class="card">
+<h3>مكتبة رقمية</h3>
+<p>تنظيم المحتوى الأكاديمي وفق هيكلية واضحة حسب التخصص والمستوى.</p>
+</div>
+<div class="card">
+<h3>المساعد الذكي</h3>
+<p>مساعد ذكي يعتمد على تقنيات الذكاء الاصطناعي لتحليل الدروس وتقديم شروحات مخصصة حسب مستوى الطالب.</p>
+</div>
+<div class="card">
+<h3>ميزة الإنقاذ قبل الامتحان</h3>
+<p>نظام ذكي للتخطيط السريع قبل الامتحان يقوم بتحليل الوقت المتبقي واقتراح استراتيجية مراجعة مكثفة وفعالة.</p>
+</div>
+<div class="card">
+<h3>الخريطة الجامعية</h3>
+<p>نظام ملاحة لتحديد المواقع داخل الجامعة.</p>
+</div>
+<div class="card">
+<h3>منتدى الطلبة</h3>
+<p>بيئة تفاعلية لتبادل المعرفة والخبرات بين الطلاب.</p>
+</div>
+<div class="card">
+<h3>الإشعارات الذكية</h3>
+<p>تنبيهات فورية مبنية على الأحداث الأكاديمية.</p>
+</div>
+<div class="card">
+<h3>الأخبار الحصرية</h3>
+<p>تحديثات مستمرة حول كل ما يتعلق بالحياة الجامعية.</p>
+</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a href="#why" class="btn">لماذا نحن؟</a>
+</div>
+</section>
+
+<section id="why">
+<div class="section-title">
+<h2>لماذا تطبيقنا أفضل</h2>
+</div>
+<div class="cards fade-in">
+<div class="card">
+<p>
+يعتمد تطبيقنا على الذكاء الاصطناعي لتخصيص تجربة التعلم لكل طالب مما يجعله أكثر فعالية مقارنة بالمنصات التقليدية.
+</p>
+</div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a href="#register" class="btn">التسجيل</a>
+</div>
+</section>
+
+<section id="register">
+<div class="section-title">
+<h2>كيفية التسجيل</h2>
+</div>
+<p class="fade-in">
+عملية تسجيل بسيطة وسريعة تتيح للطالب الدخول مباشرة إلى بيئة تعليمية ذكية مخصصة حسب تخصصه ومستواه الدراسي.
+</p>
+<div style="text-align:center; margin-top:40px;">
+<a href="#technologies" class="btn">التقنيات المستعملة</a>
+</div>
+</section>
+
+<!-- =========================
+     Technologies - Frontend / Backend / Database
+     ========================= -->
+<section id="technologies">
+<div class="section-title">
+<h2>التقنيات المستعملة</h2>
+</div>
+<div class="cards fade-in">
+
+<div class="card">
+<h3>Frontend</h3>
+<p>
+<b>Flutter و Dart:</b> مسؤول عن واجهة المستخدم، عرض المحتوى، واستقبال تفاعلات الطلاب.  
+وظيفته: عرض الكروت، الأزرار، القوائم، وتجربة المستخدم.
+</p>
+</div>
+
+<div class="card">
+<h3>Backend</h3>
+<p>
+<b>Node.js و Firebase Functions:</b> المخدم الذي يعالج بيانات الطلاب، يربط Frontend مع Database، ويشغل الذكاء الاصطناعي.  
+وظيفته: استقبال الطلبات، تحليل المعلومات، وإرجاع النتائج للواجهة.
+</p>
+</div>
+
+<div class="card">
+<h3>Database</h3>
+<p>
+<b>Firestore و MySQL:</b> تخزين جميع البيانات مثل الحسابات، المواد، الدروس، خطط المراجعة، والتفاعلات.  
+وظيفته: حفظ واسترجاع البيانات بسرعة، وتنظيمها بشكل آمن.
+</p>
+</div>
+
+<div class="card">
+<h3>AI & NLP</h3>
+<p>
+تقنيات الذكاء الاصطناعي ومعالجة اللغة الطبيعية NLP لتحليل المحتوى الدراسي والتفاعل مع المستخدم.  
+مثال: المساعد الذكي يفسر الدروس حسب مستوى الطالب.
+</p>
+</div>
+
+</div>
+<div style="text-align:center; margin-top:40px;">
+<a href="#team" class="btn">من نحن؟</a>
+</div>
+</section>
+
+<section id="team">
+<div class="section-title">
+<h2>فريق العمل</h2>
+</div>
+<div class="team fade-in">
+<div class="member">
+<h3>Sara Gemache</h3>
+<p>مسؤولة عن التصميم وتجربة المستخدم</p>
+</div>
+<div class="member">
+<h3>Bounabi Soundes</h3>
+<p>مسؤولة عن إدارة المحتوى</p>
+</div>
+<div class="member">
+<h3>Khamadj Khir Eddine</h3>
+<p>مسؤول عن تطوير النظام والذكاء الاصطناعي</p>
+</div>
+</div>
+</section>
+
+<script>
+/* ==========================================
+     Fade-in on scroll (Frontend)
+     ========================================== */
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2, rootMargin:"0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+/* ==========================================
+     Particles background animation (Frontend)
+     ========================================== */
+const particlesContainer = document.getElementById('particles');
+for(let i=0;i<50;i++){
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  const size = Math.random()*4 + 2;
+  particle.style.width = size + 'px';
+  particle.style.height = size + 'px';
+  particle.style.top = Math.random()*window.innerHeight + 'px';
+  particle.style.left = Math.random()*window.innerWidth + 'px';
+  particle.style.animationDuration = (10 + Math.random()*10) + 's';
+  particlesContainer.appendChild(particle);
+}
+
+/* 
+Backend & Database هنا غير موجود فعليا في الكود HTML، لكن في المشروع الواقعي:
+1. Frontend يرسل طلبات HTTP إلى Backend (Node.js / Firebase Functions)
+2. Backend يحلل البيانات ويخزنها أو يسترجعها من Database (Firestore / MySQL)
+3. النتائج ترجع للFrontend ليعرضها للطالب.
+*/
+</script>
+
+</body>
+</html>
